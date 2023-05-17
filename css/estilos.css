@@ -1,0 +1,1148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-1: #393e61;
+  --color-2: #063b4e;
+  --color-3: #0883af;
+  --color-4: #0b7297;
+  --color-5: #0a9cd1;
+  --color-6: #575d8a;
+  --_g: #0000 83%, #87795b 85% 99%, #0000 101%;
+  --s: 30px;
+}
+
+/* BODY (clase especifica para todos los body del sitio*/
+
+.body-all {
+  font-family: "Fira Sans", sans-serif;
+  background: radial-gradient(27% 29% at right, var(--_g)) calc(var(--s) / 2)
+      var(--s),
+    radial-gradient(27% 29% at left, var(--_g)) calc(var(--s) / -2) var(--s),
+    radial-gradient(29% 27% at top, var(--_g)) 0 calc(var(--s) / 2),
+    radial-gradient(29% 27% at bottom, var(--_g)) 0 calc(var(--s) / -2) #476074;
+  background-size: calc(2 * var(--s)) calc(2 * var(--s));
+  color: #fff;
+  max-width: 100%;
+}
+
+/* Header (clase especifica para todos los header del sitio Web) */
+
+.body-all .header-all {
+  background: var(--color-3);
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+/* Cambios para el nav-bar de Bootstrap */
+.container-fluid .navbar-brand {
+  color: #fff;
+}
+
+.navbar-toggler-icon {
+  filter: invert();
+}
+
+.container-fluid .nav-link {
+  color: #fff;
+}
+
+.nav-item .nav-link {
+  margin: 0 10px;
+  transition: all 300ms ease;
+}
+
+.nav-item .nav-link:hover {
+  background: rgb(241, 206, 50);
+  border-radius: 5px;
+  color: #000;
+  padding: 5px;
+}
+
+/* Seccion Main INDEX*/
+.main-index .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-index .hero img {
+  margin: 2rem auto;
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Propiedades para el Menu Sticky */
+.main-index-content .sticky-menu {
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+
+.sticky-menu .menu-navbar {
+  background: var(--color-4);
+  display: grid;
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  border: 8px solid var(--color-5);
+  border-radius: 10px;
+}
+
+.sticky-menu .menu-navbar ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sticky-menu .menu-navbar li {
+  padding: 0.5rem;
+}
+
+.sticky-menu .menu-navbar a {
+  transition: all 300ms ease;
+  text-decoration: none;
+  color: #fff;
+}
+
+.sticky-menu .menu-navbar a:hover {
+  background: rgb(241, 206, 50);
+  border-radius: 5px;
+  color: #000;
+  padding: 5px;
+}
+
+/* Articulos del Main pag.Index */
+
+.container-articles-index {
+  background: var(--color-4);
+  width: 80%;
+  margin: 10px auto;
+  padding: 40px;
+  text-align: center;
+  border: 10px solid var(--color-3);
+  border-radius: 20px;
+}
+
+/* Propiedades para todos los articulos */
+.container-articles-index .article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-3);
+  padding: 20px;
+  border: 10px solid var(--color-5);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Modificadores del Sub-titulo */
+.container-articles-index .article h2 {
+  width: 50%;
+  background: rgb(236, 198, 28);
+  padding: 5px;
+  margin-bottom: 10px;
+  font-weight: lighter;
+  color: #000;
+  border: 5px solid rgb(176, 126, 1);
+  border-radius: 10px;
+}
+/* Modificadores de las imagenes en el articulo */
+.container-articles-index .article img {
+  border-radius: 20px;
+  margin-bottom: 10px;
+  width: 50%;
+}
+/* modificadores de los parrafos de cada articulo */
+.container-articles-index .article p {
+  font-size: 1.2rem;
+  background: rgb(0, 0, 0, 0.2);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* Seccion Colaboradores y sus componentes */
+section .colaboradores {
+  display: flex;
+  justify-content: center;
+}
+
+.colaboradores img {
+  margin-bottom: 2rem;
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+
+footer {
+  background: var(--color-3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 4rem;
+}
+/* Modificador del titulo de la pagina en el footer */
+footer h3 {
+  margin: 0;
+  margin-left: 40px;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/* Logo del sitio web en el costado izq del titulo */
+footer h3::before {
+  content: url(/img/magia-lunarLogo32x32.png);
+  display: block;
+  position: absolute;
+  left: 10px;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Iconos de las Redes Sociales del footer */
+footer .socials ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+footer .socials a {
+  margin: 0 10px;
+  text-decoration: none;
+}
+/* Efecto hover cambia de color los iconos a blanco */
+footer .socials img:hover {
+  filter: invert(100%) sepia(2%) saturate(2112%) hue-rotate(323deg)
+    brightness(123%) contrast(100%);
+}
+
+/* PAGINA TUTORIALES */
+/* Esta clase se usa para todos los banner del sitio web */
+main .banner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+main .banner img {
+  width: 50%;
+}
+main .banner h2 {
+  text-shadow: 5px 5px 3px #000;
+  margin-top: 0.5rem;
+}
+/* contenedor para todo el contenido tutoriales */
+section .container-tutoriales {
+  width: 90%;
+  height: auto;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background: var(--color-2);
+  border: 8px solid var(--color-4);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 20% auto;
+  gap: 1rem;
+}
+
+/* menu sticky para la seccion tutoriales */
+.container-tutoriales .tutoriales-menu {
+  display: flex;
+  height: 80vh;
+  background: var(--color-4);
+  border: 4px solid var(--color-3);
+  border-radius: 5px;
+  padding: 2rem;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+}
+
+/* modifica los valores por defecto que viene en bootstrap */
+.container-tutoriales .tutoriales-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container-tutoriales .tutoriales-menu li {
+  margin-bottom: 1rem;
+  list-style: none;
+}
+
+.container-tutoriales .tutoriales-menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Efecto amarillo sobre las letras del menu-sticky */
+.container-tutoriales .tutoriales-menu a:hover {
+  color: rgb(241, 206, 50);
+}
+
+/* seccion del contenido de los tutoriales */
+section .contenido-menu-tutoriales {
+  text-align: center;
+  background-color: var(--color-3);
+  border: 8px solid var(--color-4);
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* contenedor de cada elemento dentro de tutoriales */
+.contenido-menu-tutoriales .videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-2);
+  padding: 1rem;
+  border: 4px solid var(--color-5);
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  height: 70vh;
+}
+
+.contenido-menu-tutoriales .videos h3 {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: var(--color-5);
+  font-weight: bold;
+  font-style: italic;
+}
+
+.contenido-menu-tutoriales .videos iframe {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.2);
+  margin-bottom: 1rem;
+}
+
+/* PAGINA PUBLICACIONES */
+
+/* Contenedor para todo el contendio main de Publicaciones */
+section .container-publicaciones {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem auto;
+}
+
+/* menu para el contenido ordenado en lista */
+.container-publicaciones .menu {
+  background: var(--color-2);
+  padding: 1rem;
+  margin-left: 1rem;
+  border: 4px solid var(--color-4);
+  border-radius: 10px;
+  height: 50%;
+  text-align: center;
+}
+
+.container-publicaciones.menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.container-publicaciones .menu li,
+.container-publicaciones .menu h3 {
+  margin-bottom: 0.5rem;
+}
+
+.container-publicaciones .menu li {
+  list-style: none;
+}
+
+.container-publicaciones .menu a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container-publicaciones .menu a:hover {
+  color: rgb(241, 206, 50);
+}
+
+/* Contenedor del contendio de Publicaciones */
+section .articles-grid {
+  background: var(--color-2);
+  padding: 1rem;
+  border: 4px solid var(--color-4);
+  border-radius: 10px;
+  margin-right: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+/* Cards con el contenido de las publicacioens */
+.articles-grid .articles-publicaciones {
+  background: var(--color-4);
+  padding: 1rem;
+  border: 4px solid var(--color-5);
+  border-radius: 10px;
+}
+
+.articles-publicaciones img {
+  border-radius: 5px;
+  margin: 1rem;
+  box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Nav-Pagination bootstrap */
+
+.articles-grid .nav-pagination {
+  grid-column: 2/3;
+  justify-self: center;
+  margin: 0;
+}
+
+.pagination .page-link {
+  background: var(--color-5);
+  color: #fff;
+  border: 1px solid var(--color-4);
+}
+
+/* PAGINA HERRAMIENTAS */
+
+/* contenedor para las card del contenido herramientas */
+main .card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1rem 2rem;
+  gap: 1rem;
+  background: var(--color-2);
+  padding: 2rem;
+  border: 6px solid var(--color-4);
+  border-radius: 10px;
+}
+
+/* Modificadores para el titulo del contenido herramientas */
+.card-container .titulo-herramientas {
+  grid-column: 1/ 5;
+  text-align: center;
+  font-size: 1.5rem;
+  background: var(--color-3);
+  border-radius: 10px;
+  padding: 1rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+/* Efecto de escalado para las card */
+.card-container .card:hover {
+  transform: scale(1.03);
+  transition: all 0.1s ease;
+}
+
+/* clase especifica para modificar el texto de Bootstrap */
+.card-body .title-bold {
+  font-weight: bolder;
+}
+
+.card-container .card a {
+  background: var(--color-4);
+  display: block;
+  padding: 0.5rem 1rem;
+}
+
+/* efecto para el "boton-enlace"  */
+.card-container .card a:hover {
+  background: var(--color-5);
+}
+
+/* Clase especial para modificar Bootstrap pagination component */
+.card-container .nav-pagination1 {
+  grid-column: 2/4;
+  justify-self: center;
+  margin-top: 1rem;
+}
+
+.nav-pagination1 .pagination {
+  margin: 0;
+}
+
+/* PAGINA SOBRE ML */
+
+/* Contenedor para todos los elementos de la pagina */
+main .container-img-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem;
+  gap: 4rem;
+}
+
+/* contendor para la imagen */
+.container-img-form .form-img {
+  display: flex;
+}
+
+/* Contenedor poara la contact-card */
+.container-img-form .contact-card {
+  background: var(--color-2);
+  padding: 2rem;
+  border: 6px solid var(--color-4);
+  border-radius: 10px;
+  width: 50%;
+  box-shadow: 10px 10px 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* Modificadores de los textos de la card */
+.container-img-form .contact-card h3,
+.container-img-form .contact-card p {
+  margin-bottom: 0.5rem;
+}
+
+/* Contenedor del Formulario de la card */
+.contact-card .contact-form {
+  background: var(--color-3);
+  padding: 1rem;
+  border: 4px solid var(--color-5);
+  border-radius: 10px;
+}
+
+.contact-card .contact-form form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-form form p {
+  margin: 0;
+  padding: 1rem;
+}
+
+/* Clase especial para crear columnas enteneras */
+.contact-form form .block {
+  grid-column: 1/ 3;
+}
+
+.contact-form form textarea {
+  resize: none;
+}
+
+/* Modificadores para los input y text area */
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: none;
+  background: none;
+  outline: none;
+  border-bottom: 2px solid var(--color-2);
+  color: #fff;
+}
+
+/* modificador del boton del formulario */
+.contact-form form button {
+  background: var(--color-5);
+  border: 0;
+  border-radius: 10px;
+  text-transform: uppercase;
+  padding: 1rem;
+}
+
+/* Efectos para los botones del formulario */
+.contact-form form button:hover,
+.contact-form form button:focus {
+  background: var(--color-4);
+  color: #fff;
+  transition: 400ms ease;
+}
+
+/* MEDIA-QUERIES */
+
+@media (max-width: 1200px) {
+  .header-all {
+    justify-content: center;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .nav-item .nav-link {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+  }
+
+  .main-index .hero img {
+    width: 100%;
+  }
+
+  .sticky-menu .menu-navbar {
+    padding: 5px;
+    width: 90%;
+  }
+
+  .menu-navbar a {
+    font-size: 0.9rem;
+  }
+
+  .main-index .container-articles-index {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .article p {
+    font-size: 1rem;
+  }
+
+  .article h2 {
+    width: 50%;
+    font-size: 1rem;
+  }
+
+  .colaboradores img {
+    width: 90%;
+  }
+  .main-index .hero img {
+    width: 90%;
+  }
+
+  footer h3 {
+    font-size: 1.2rem;
+  }
+
+  /* PAGE-PUBLICACIONES */
+
+  section .articles-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .container-publicaciones .menu {
+    position: sticky;
+    top: 0;
+  }
+
+  .pagination {
+    justify-content: center;
+  }
+
+  /* PAGE SOBRE ML */
+
+  .container-img-form .contact-card {
+    width: 100%;
+  }
+
+  .container-img-form .form-img {
+    display: none;
+  }
+}
+
+@media (max-width: 1020px) {
+  /* PAGINA TUTORIALES */
+  section .container-tutoriales {
+    width: 95%;
+  }
+  .container-tutoriales .tutoriales-menu {
+    padding: 0.5rem;
+  }
+
+  .tutoriales-menu .tutoriales-items {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-all {
+    justify-content: center;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .nav-item .nav-link {
+    background: var(--color-5);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+  }
+
+  footer h3 {
+    font-size: 1rem;
+  }
+  .colaboradores img {
+    width: 90%;
+  }
+  .main-index .hero img {
+    width: 90%;
+  }
+
+  .sticky-menu .menu-navbar {
+    padding: 5px;
+    width: 90%;
+  }
+
+  .menu-navbar a {
+    font-size: 0.9rem;
+  }
+
+  .main-index .container-articles-index {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .article p {
+    font-size: 1rem;
+  }
+
+  /* PAGE-TUTORIALES */
+
+  section .container-tutoriales {
+    width: 100%;
+  }
+
+  .container-tutoriales .contenido-menu-tutoriales {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .videos h3 {
+    font-size: 1rem;
+  }
+
+  .container-tutoriales .tutoriales-menu {
+    padding: 0.5rem;
+  }
+
+  .tutoriales-menu a {
+    font-size: 0.8rem;
+  }
+
+  /* PAGE-SOBRE-ML */
+
+  .container-img-form .contact-card {
+    width: 100%;
+  }
+
+  .container-img-form .form-img {
+    display: none;
+  }
+}
+@media (max-width: 672px) {
+  /* HEADER*/
+  .header-all {
+    justify-content: center;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .nav-item .nav-link {
+    background: var(--color-5);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+  }
+
+  .colaboradores img {
+    width: 90%;
+  }
+
+  .sticky-menu .menu-navbar {
+    padding: 5px;
+    width: 90%;
+  }
+
+  .menu-navbar a {
+    font-size: 0.9rem;
+  }
+
+  .main-index .container-articles-index {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* PAGE-TUTORIALES */
+
+  main .container-tutoriales {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  section .contenido-menu-tutoriales {
+    width: 100%;
+    padding: 0;
+    border-radius: 1rem;
+  }
+
+  .contenido-menu-tutoriales .videos h3 {
+    font-size: 1rem;
+  }
+
+  .container-tutoriales .tutoriales-menu {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .container-tutoriales .tutoriales-menu li {
+    display: inline;
+  }
+
+  .tutoriales-menu a {
+    font-size: 0.8rem;
+  }
+
+  /* PAGE HERRAMIENTAS */
+  .card-container .card-title {
+    font-size: 0.8rem;
+  }
+  .card-container .card-text {
+    font-size: 0.5rem;
+  }
+  .card-container .btn {
+    font-size: 0.5em;
+  }
+  .card-container .card-body {
+    padding: 0.2rem;
+  }
+
+  /* FOOTER */
+  footer p {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-all {
+    justify-content: center;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .nav-item .nav-link {
+    background: var(--color-5);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+  }
+
+  /* MAIN-INDEX */
+
+  .main-index .hero {
+    margin-bottom: 1rem;
+  }
+
+  .sticky-menu .menu-navbar {
+    padding: 5px;
+    width: 90%;
+  }
+
+  .sticky-menu .menu-navbar a {
+    font-size: 0.9rem;
+  }
+
+  .main-index .container-articles-index {
+    width: 100%;
+    margin: 0.7rem auto;
+    padding: 0.5rem;
+  }
+
+  .container-articles-index .article h2 {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .article p {
+    font-size: 0.8rem;
+  }
+
+  .colaboradores img {
+    width: 90%;
+  }
+
+  footer h3 {
+    font-size: 1.2rem;
+  }
+
+  footer h3::before {
+    left: 10px;
+  }
+
+  .socials img {
+    width: 70%;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  /*PAGE-TUTORIALES */
+
+  main .container-tutoriales {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container-tutoriales .tutoriales-menu {
+    width: 100%;
+    height: auto;
+    text-align: center;
+  }
+
+  .container-tutoriales .tutoriales-menu li {
+    display: inline;
+  }
+
+  .tutoriales-menu a {
+    font-size: 1rem;
+  }
+
+  .contenido-menu-tutoriales {
+    width: 100%;
+    padding: 0;
+    border-radius: 1rem;
+  }
+
+  .contenido-menu-tutoriales .videos {
+    height: auto;
+  }
+
+  .contenido-menu-tutoriales .videos h3 {
+    font-size: 1rem;
+  }
+
+  /* PAGE-PUBLICACIONES */
+
+  main .container-publicaciones {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container-publicaciones .menu {
+    text-align: center;
+    margin: 0 1rem;
+  }
+
+  .container-publicaciones .articles-grid {
+    margin: 0;
+    padding: 1rem;
+  }
+
+  .container-publicaciones .menu li {
+    display: inline;
+  }
+
+  /*PAGE-HERRAMIENTAS */
+
+  main .card-container {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .card-container .titulo-herramientas {
+    font-size: 1rem;
+    width: 70%;
+  }
+
+  .card-container .card-title {
+    font-size: 2rem;
+  }
+
+  .card-container .card-text {
+    font-size: 1rem;
+  }
+
+  .card-container .btn {
+    font-size: 1rem;
+  }
+
+  /* PAGE-SOBRE-ML */
+
+  main .container-img-form {
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+  }
+  .container-img-form .contact-card {
+    padding: 0.5rem;
+    width: 100%;
+  }
+
+  .contact-card .contact-form {
+    padding: 0;
+  }
+
+  .contact-card .contact-form h3 {
+    padding-left: 0.5rem;
+    padding-top: 0.5rem;
+    font-style: italic;
+  }
+}
+@media (max-width: 376px) {
+  /* MAIN */
+  .header-all {
+    border-radius: 0 0 1rem 1rem;
+  }
+  .nav-item .nav-link {
+    background: var(--color-5);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 0.2rem 0;
+  }
+
+  .menu-navbar {
+    width: 90%;
+    font-size: 0.6rem;
+    border: 5px solid var(--color-5);
+  }
+
+  .main-index .container-articles-index {
+    width: 100%;
+    padding: 0.5rem;
+    border: 5px solid var(--color-3);
+  }
+  .container-articles-index .article {
+    border: 5px solid var(--color-5);
+  }
+
+  .container-articles-index .article h2 {
+    font-size: 0.7rem;
+    width: 60%;
+  }
+
+  .container-articles-index .article p {
+    font-size: 0.7rem;
+  }
+
+  .colaboradores img {
+    width: 90%;
+  }
+
+  footer h3 {
+    margin: 0;
+  }
+
+  footer h3::before {
+    display: none;
+  }
+
+  footer p {
+    font-size: 0.5rem;
+  }
+
+  footer .socials img {
+    width: 70%;
+  }
+
+  footer p {
+    text-align: center;
+  }
+
+  /*PAGE-TUTORIALES */
+
+  main .container-tutoriales {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+
+  .container-tutoriales .tutoriales-menu {
+    height: 10%;
+    margin: 0 1rem;
+    border: 4px solid var(--color-5);
+  }
+
+  .container-tutoriales .tutoriales-menu li {
+    display: inline;
+    flex-wrap: wrap;
+    font-size: 0.5rem;
+  }
+
+  .tutoriales-menu a {
+    font-size: 0.7rem;
+  }
+
+  .container-tutoriales .contenido-menu-tutoriales {
+    display: flex;
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .contenido-menu-tutoriales .videos {
+    height: 50%;
+  }
+
+  .contenido-menu-tutoriales .videos h3 {
+    font-size: 0.7rem;
+  }
+
+  /* PAGE-PUBLICACIONES */
+
+  .container-publicaciones {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .container-publicaciones .menu {
+    width: 100%;
+    margin: 0 0.5rem;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .container-publicaciones .menu li {
+    display: inline;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+  }
+
+  .container-publicaciones .articles-grid {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0;
+  }
+
+  /* HERRAMIENTAS */
+
+  main .card-container {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+
+  .card-container .titulo-herramientas {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  /* SOBRE-ML */
+
+  main .banner h2 {
+    font-size: 1rem;
+  }
+}
