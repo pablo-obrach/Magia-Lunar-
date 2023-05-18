@@ -360,7 +360,7 @@ section .container-publicaciones {
   text-align: center;
 }
 
-.container-publicaciones .menu ul {
+.container-publicaciones .menu .no-margin-padding {
   margin: 0;
   padding: 0;
 }
