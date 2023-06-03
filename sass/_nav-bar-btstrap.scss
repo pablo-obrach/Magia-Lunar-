@@ -1,0 +1,37 @@
+@use "variables";
+@import "media-queries";
+
+.navbar {
+  .container-fluid {
+    .navbar-brand {
+      color: #fff;
+    }
+    .navbar-toggler-icon {
+      filter: invert(#fff);
+    }
+    .collapse {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            color: #fff;
+            margin: 0 10px;
+            transition: all 300ms ease;
+
+            @include mobile() {
+              background: variables.$color5;
+              border-radius: 0.5rem;
+              padding: 0.5rem;
+              margin: 0.2rem 0;
+            }
+          }
+
+          .nav-link:hover {
+            background: variables.$color7;
+            border-radius: 5px;
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+}

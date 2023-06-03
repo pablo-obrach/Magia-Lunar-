@@ -1,0 +1,14 @@
+@use "variables";
+@import "media-queries";
+
+.header-all {
+  background: variables.$color3;
+  display: flex;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+
+  @include mobile(480px) {
+    justify-content: center;
+    border-radius: 0 0 1rem 1rem;
+  }
+}

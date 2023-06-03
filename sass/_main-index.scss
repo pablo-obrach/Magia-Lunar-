@@ -1,0 +1,161 @@
+@use "variables";
+@import "media-queries";
+
+.main-index {
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h1 {
+      text-shadow: 5px 5px 3px #000;
+      margin-bottom: 2rem;
+
+      @include mobile() {
+        text-align: center;
+        margin: 0 0.5rem;
+      }
+    }
+
+    img {
+      margin: 2rem auto;
+      border-radius: 10px;
+      box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.2);
+
+      @include mobile() {
+        width: 90%;
+      }
+    }
+
+    @include mobile() {
+      margin-bottom: 1rem;
+    }
+  }
+  .main-index-content {
+    .sticky-menu {
+      display: flex;
+      justify-content: center;
+      position: sticky;
+      top: 0;
+
+      .menu-navbar {
+        background: variables.$color4;
+        display: grid;
+        width: 50%;
+        text-align: center;
+        padding: 10px;
+        border: 8px solid variables.$color5;
+        border-radius: 10px;
+
+        ul {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        li {
+          padding: 0.5rem;
+        }
+
+        a {
+          transition: all 300ms ease;
+          text-decoration: none;
+          color: #fff;
+        }
+        a:hover {
+          background: variables.$color7;
+          border-radius: 5px;
+          color: #000;
+          padding: 5px;
+        }
+
+        @include mobile() {
+          width: 90%;
+          font-size: 0.6rem;
+          border: 5px solid variables.$color5;
+        }
+      }
+    }
+  }
+  .container-articles-index {
+    background: variables.$color4;
+    width: 80%;
+    margin: 10px auto;
+    padding: 40px;
+    text-align: center;
+    border: 10px solid variables.$color3;
+    border-radius: 20px;
+
+    .article {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: variables.$color3;
+      padding: 20px;
+      border: 10px solid variables.$color5;
+      border-radius: 10px;
+      margin-bottom: 10px;
+
+      h2 {
+        width: 50%;
+        background: variables.$color7;
+        padding: 5px;
+        margin-bottom: 10px;
+        font-weight: lighter;
+        color: #000;
+        border: 5px solid rgb(176, 126, 1);
+        border-radius: 10px;
+
+        @include mobile() {
+          font-size: 0.7rem;
+          width: 60%;
+        }
+      }
+
+      img {
+        border-radius: 20px;
+        margin-bottom: 10px;
+        width: 50%;
+      }
+
+      p {
+        font-size: 1.2rem;
+        background: rgb(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 10px;
+
+        @include mobile() {
+          font-size: 0.7rem;
+        }
+      }
+
+      @include mobile() {
+        border: 5px solid variables.$color5;
+      }
+    }
+
+    @include mobile() {
+      width: 100%;
+      padding: 0.5rem;
+      border: 5px solid variables.$color3;
+    }
+  }
+  .colaboradores {
+    display: flex;
+    justify-content: center;
+
+    img {
+      margin-bottom: 2rem;
+      border-radius: 20px;
+      box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.2);
+
+      @include mobile() {
+        width: 90%;
+      }
+    }
+  }
+}

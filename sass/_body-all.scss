@@ -1,0 +1,13 @@
+@use 'variables';
+
+.body-all {
+  font-family: "Fira Sans", sans-serif;
+  background: radial-gradient(27% 29% at right, variables.$g) calc(variables.$s / 2)
+  variables.$s,
+    radial-gradient(27% 29% at left, variables.$g) calc(variables.$s / -2) variables.$s,
+    radial-gradient(29% 27% at top, variables.$g) 0 calc(variables.$s / 2),
+    radial-gradient(29% 27% at bottom, variables.$g) 0 calc(variables.$s / -2) #476074;
+  background-size: calc(2 * variables.$s) calc(2 * variables.$s);
+  color: #fff;
+  max-width: 100%;
+}

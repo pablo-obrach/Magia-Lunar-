@@ -1,0 +1,81 @@
+@use "variables";
+@import "media-queries";
+main {
+  section {
+    article {
+      .card-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin: 1rem 2rem;
+        gap: 1rem;
+        background: variables.$color2;
+        padding: 2rem;
+        border: 6px solid variables.$color4;
+        border-radius: 10px;
+
+        .titulo-herramientas {
+          grid-column: 1/ 5;
+          text-align: center;
+          font-size: 1.5rem;
+          background: variables.$color3;
+          border-radius: 10px;
+          padding: 1rem;
+          font-style: italic;
+          margin-bottom: 1rem;
+
+          @include mobile() {
+            font-size: 1rem;
+          }
+        }
+
+        .card {
+          .card-body {
+            .title-bold {
+              font-weight: bolder;
+              font-size: 1rem;
+            }
+
+            .card-text {
+              @include mobile() {
+                font-size: 0.7rem;
+              }
+            }
+
+            a {
+              background: variables.$color4;
+              display: block;
+              padding: 0.5rem 1rem;
+
+              @include mobile() {
+                font-size: 0.7rem;
+                padding: 0.5rem 0.2rem;
+              }
+            }
+          }
+        }
+        .card:hover {
+          transform: scale(1.03);
+          transition: all 0.1s ease;
+        }
+
+        a:hover {
+          background: variables.$color5;
+        }
+
+        .nav-pagination1 {
+          grid-column: 2/4;
+          justify-self: center;
+          margin-top: 1rem;
+
+          .pagination {
+            margin: 0;
+          }
+        }
+        @include mobile() {
+          margin: 0;
+          padding: 0.5rem;
+        }
+      }
+    }
+  }
+}

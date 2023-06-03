@@ -1,0 +1,128 @@
+@use "variables";
+@import "media-queries";
+
+main {
+  section {
+    article {
+      .banner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        img {
+          width: 50%;
+        }
+
+        h1 {
+          text-shadow: 5px 5px 3px #000;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .container-tutoriales {
+    width: 90%;
+    height: auto;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    background: variables.$color2;
+    border: 8px solid variables.$color4;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 20% auto;
+    gap: 1rem;
+
+    .tutoriales-menu {
+      align-self: flex-start;
+      background: variables.$color4;
+      border: 4px solid variables.$color3;
+      border-radius: 5px;
+      padding: 2rem;
+      font-size: 1.2rem;
+      position: sticky;
+      top: 0;
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        @include mobile() {
+        }
+      }
+
+      li {
+        margin-bottom: 1rem;
+        list-style: none;
+
+        @include mobile() {
+          font-size: 0.8rem;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      a:hover {
+        color: rgb(241, 206, 50);
+      }
+
+      @include mobile() {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    @include mobile() {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .contenido-menu-tutoriales {
+    text-align: center;
+    background-color: variables.$color3;
+    border: 8px solid variables.$color4;
+    border-radius: 10px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile() {
+      padding: 0;
+    }
+
+    .videos {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: variables.$color2;
+      padding: 1rem;
+      border: 4px solid variables.$color5;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+      height: 70vh;
+
+      h3 {
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        border-radius: 5px;
+        background: variables.$color5;
+        font-weight: bold;
+        font-style: italic;
+
+        @include mobile() {
+          font-size: 1rem;
+        }
+      }
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.2);
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
