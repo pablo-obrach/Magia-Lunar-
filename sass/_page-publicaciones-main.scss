@@ -67,6 +67,11 @@ main {
             margin: 0;
           }
 
+          @include tablet() {
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0;
+          }
+
           .articles-publicaciones {
             background: variables.$color4;
             padding: 1rem;
