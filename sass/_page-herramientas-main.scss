@@ -74,6 +74,10 @@ main {
         @include mobile() {
           margin: 0;
           padding: 0.5rem;
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          align-items: center;
         }
       }
     }

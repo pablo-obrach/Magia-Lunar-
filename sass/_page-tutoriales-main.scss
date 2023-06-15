@@ -47,9 +47,6 @@ main {
       ul {
         margin: 0;
         padding: 0;
-
-        @include mobile() {
-        }
       }
 
       li {
@@ -122,6 +119,10 @@ main {
         height: 100%;
         box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.2);
         margin-bottom: 1rem;
+      }
+
+      @include mobile() {
+        height: 35vh;
       }
     }
   }

@@ -78,11 +78,6 @@
     width: 90%;
   }
 }
-@media screen and (max-width: 821px) {
-  .main-index .hero img {
-    width: 90%;
-  }
-}
 @media screen and (max-width: 480px) {
   .main-index .hero {
     margin-bottom: 1rem;
@@ -205,11 +200,6 @@
   box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.2);
 }
 @media screen and (max-width: 480px) {
-  .main-index .colaboradores img {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 821px) {
   .main-index .colaboradores img {
     width: 90%;
   }
@@ -387,6 +377,11 @@ main .contenido-menu-tutoriales .videos iframe {
   box-shadow: 0 0 6px 3px rgba(255, 255, 255, 0.2);
   margin-bottom: 1rem;
 }
+@media screen and (max-width: 480px) {
+  main .contenido-menu-tutoriales .videos {
+    height: 35vh;
+  }
+}
 
 main section article .container-publicaciones {
   display: flex;
@@ -447,12 +442,6 @@ main section article .container-publicaciones .articles-grid {
 @media screen and (max-width: 480px) {
   main section article .container-publicaciones .articles-grid {
     grid-template-columns: 1fr;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 821px) {
-  main section article .container-publicaciones .articles-grid {
-    grid-template-columns: repeat(2, 1fr);
     margin: 0;
   }
 }
@@ -538,6 +527,10 @@ main section article .card-container .nav-pagination1 .pagination {
   main section article .card-container {
     margin: 0;
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
   }
 }
 
@@ -556,16 +549,6 @@ main section article .container-img-form .form-img {
     display: none;
   }
 }
-@media screen and (max-width: 821px) {
-  main section article .container-img-form .form-img {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 821px) {
-  main section article .container-img-form .form-img img {
-    width: 90%;
-  }
-}
 main section article .container-img-form .contact-card {
   background: #063b4e;
   padding: 2rem;
@@ -573,11 +556,6 @@ main section article .container-img-form .contact-card {
   border-radius: 10px;
   width: 50%;
   box-shadow: 10px 10px 4px 2px rgba(0, 0, 0, 0.4);
-}
-@media screen and (max-width: 821px) {
-  main section article .container-img-form .contact-card {
-    width: 100%;
-  }
 }
 main section article .container-img-form .contact-card .contact-form {
   background: #0883af;
