@@ -6,6 +6,19 @@
   display: flex;
   margin-bottom: 10px;
   flex-wrap: wrap;
+  nav {
+    .container-fluid {
+      button {
+        color: transparent;
+        span {
+          filter: invert(1);
+        }
+      }
+      .navbar-collapse {
+        text-align: center;
+      }
+    }
+  }
 
   @include mobile(480px) {
     justify-content: center;

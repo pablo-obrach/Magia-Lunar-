@@ -17,6 +17,7 @@ main {
           border-radius: 10px;
           height: 50%;
           text-align: center;
+
           @include mobile() {
             margin: 0;
             position: sticky;
@@ -78,8 +79,17 @@ main {
               margin: 1rem;
               box-shadow: 0px 0px 6px 5px rgba(0, 0, 0, 0.4);
             }
+
+            @include mobile() {
+              padding: 0;
+            }
+          }
+          @include mobile() {
+            flex-direction: column;
+            z-index: 0;
           }
         }
+
         @include mobile() {
           flex-direction: column;
           z-index: 0;
