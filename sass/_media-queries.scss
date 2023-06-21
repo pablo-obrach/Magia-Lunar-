@@ -3,3 +3,9 @@
     @content;
   }
 }
+
+@mixin tablet($medida: 830px) {
+  @media screen and (max-width: $medida) {
+    @content;
+  }
+}

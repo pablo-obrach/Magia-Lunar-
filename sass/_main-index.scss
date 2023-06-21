@@ -26,6 +26,10 @@
       @include mobile() {
         width: 90%;
       }
+
+      @include tablet() {
+        width: 90%;
+      }
     }
 
     @include mobile() {
@@ -154,6 +158,10 @@
       box-shadow: 10px 10px 5px 2px rgba(0, 0, 0, 0.2);
 
       @include mobile() {
+        width: 90%;
+      }
+
+      @include tablet() {
         width: 90%;
       }
     }

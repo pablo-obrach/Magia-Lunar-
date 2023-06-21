@@ -88,6 +88,10 @@ main {
             flex-direction: column;
             z-index: 0;
           }
+
+          @include tablet() {
+            grid-template-columns: repeat(2, 1fr);
+          }
         }
 
         @include mobile() {
